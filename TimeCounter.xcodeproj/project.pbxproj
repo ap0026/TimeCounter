@@ -13,6 +13,7 @@
 		9520649121CE7D3C00914545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9520649021CE7D3C00914545 /* Assets.xcassets */; };
 		9520649421CE7D3C00914545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9520649221CE7D3C00914545 /* LaunchScreen.storyboard */; };
 		9520649F21CE7D3C00914545 /* TimeCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9520649E21CE7D3C00914545 /* TimeCounterTests.swift */; };
+		952064AA21CE81B900914545 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952064A921CE81B900914545 /* Stopwatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9520649A21CE7D3C00914545 /* TimeCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9520649E21CE7D3C00914545 /* TimeCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounterTests.swift; sourceTree = "<group>"; };
 		952064A021CE7D3C00914545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952064A921CE81B900914545 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				9520648921CE7D3A00914545 /* AppDelegate.swift */,
 				9520648B21CE7D3A00914545 /* ViewController.swift */,
+				952064A921CE81B900914545 /* Stopwatch.swift */,
 				9520648D21CE7D3A00914545 /* Main.storyboard */,
 				9520649021CE7D3C00914545 /* Assets.xcassets */,
 				9520649221CE7D3C00914545 /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9520648C21CE7D3A00914545 /* ViewController.swift in Sources */,
+				952064AA21CE81B900914545 /* Stopwatch.swift in Sources */,
 				9520648A21CE7D3A00914545 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
