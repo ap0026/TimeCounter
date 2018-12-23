@@ -18,53 +18,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m1-ei-xlO">
-                                <rect key="frame" x="69" y="114" width="215" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m1-ei-xlO">
+                                <rect key="frame" x="80" y="113" width="215" height="60"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13o-Yo-m2h">
-                                <rect key="frame" x="59" y="318" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rAq-JT-3nn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kY-RH-lYr">
-                                <rect key="frame" x="160" y="261" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kY-RH-lYr">
+                                <rect key="frame" x="160" y="417" width="54" height="30"/>
                                 <state key="normal" title="Append"/>
                                 <connections>
                                     <action selector="appendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3zR-GR-u4P"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXO-Ap-hLO">
-                                <rect key="frame" x="269" y="318" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXO-Ap-hLO">
+                                <rect key="frame" x="112" y="258" width="150" height="150"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jDY-BR-US7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sne-nQ-vvu">
-                                <rect key="frame" x="165" y="210" width="73" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sne-nQ-vvu">
+                                <rect key="frame" x="176" y="205" width="73" height="21"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nh-rj-X2V">
-                                <rect key="frame" x="115" y="210" width="40" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nh-rj-X2V">
+                                <rect key="frame" x="126" y="205" width="40" height="21"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JXO-Ap-hLO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="13Z-Md-pRb"/>
+                            <constraint firstItem="JXO-Ap-hLO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="B0v-FU-XVK"/>
+                            <constraint firstItem="9nh-rj-X2V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="Ev2-hf-Ixi"/>
+                            <constraint firstItem="JXO-Ap-hLO" firstAttribute="centerX" secondItem="7kY-RH-lYr" secondAttribute="centerX" id="Pdh-lA-7LM"/>
+                            <constraint firstItem="JXO-Ap-hLO" firstAttribute="top" secondItem="9nh-rj-X2V" secondAttribute="bottom" constant="32" id="SNI-Ve-pVU"/>
+                            <constraint firstItem="9nh-rj-X2V" firstAttribute="baseline" secondItem="Sne-nQ-vvu" secondAttribute="baseline" id="Sdj-pf-iIV"/>
+                            <constraint firstItem="Sne-nQ-vvu" firstAttribute="leading" secondItem="9nh-rj-X2V" secondAttribute="trailing" constant="10" id="cOo-WQ-Rj3"/>
+                            <constraint firstItem="4m1-ei-xlO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="i2O-Ip-Jg1"/>
+                            <constraint firstItem="9nh-rj-X2V" firstAttribute="top" secondItem="4m1-ei-xlO" secondAttribute="bottom" constant="32" id="nwJ-xk-Mgu"/>
+                            <constraint firstItem="4m1-ei-xlO" firstAttribute="centerX" secondItem="JXO-Ap-hLO" secondAttribute="centerX" id="tYl-CL-Kff"/>
+                            <constraint firstItem="7kY-RH-lYr" firstAttribute="top" secondItem="JXO-Ap-hLO" secondAttribute="bottom" constant="9" id="tlc-W5-7sg"/>
+                            <constraint firstItem="JXO-Ap-hLO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tyd-GP-wra"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -74,6 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-191.19999999999999" y="53.523238380809602"/>
         </scene>
     </scenes>
 </document>

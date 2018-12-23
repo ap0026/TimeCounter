@@ -21,21 +21,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     @IBAction func appendButton(_ sender: UIButton) {
     }
     
-    @IBAction func stopButton(_ sender: UIButton) {
-        stopwatch.stop()
-    }
     @IBAction func startButton(_ sender: UIButton) {
         
         // scheduledTimer fires every 1 second and updates Stopwatch label
         Timer.scheduledTimer(timeInterval: 1, target: self,
                              selector: #selector(ViewController.updateStopwatchLabel(_:)), userInfo: nil, repeats: true)
-        
-        stopwatch.start()
+        if sender.currentTitle == "Start" {
+            sender.setTitle("Stop", for: .normal)
+            stopwatch.start()
+        } else {
+            sender.setTitle("Start", for: .normal)
+            stopwatch.stop()
+        }
     }
     
     @objc func updateStopwatchLabel(_ timer: Timer) {
