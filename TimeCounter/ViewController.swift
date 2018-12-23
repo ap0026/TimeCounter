@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var stopwatchLabel: UILabel!
     
     
+    @IBOutlet weak var totalTimeLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -38,11 +39,14 @@ class ViewController: UIViewController {
     }
     
     @objc func updateStopwatchLabel(_ timer: Timer) {
-        print(stopwatch)
+        //print(stopwatch)
         if stopwatch.isRunning {
             stopwatchLabel.text = stopwatch.elapsedTimeAsString
+            totalTimeLabel.text = stopwatch.totalTimeAsString
         } else {
             timer.invalidate()
+            // resets stopwatchLabel to 00:00:00
+            stopwatchLabel.text = stopwatch.elapsedTimeAsString
         }
     }
     

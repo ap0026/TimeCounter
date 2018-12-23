@@ -61,6 +61,7 @@
 		9520647D21CE7D3A00914545 = {
 			isa = PBXGroup;
 			children = (
+				9573583D21CF8CC600EC34E6 /* Model */,
 				9520648821CE7D3A00914545 /* TimeCounter */,
 				9520649D21CE7D3C00914545 /* TimeCounterTests */,
 				9520648721CE7D3A00914545 /* Products */,
@@ -97,6 +98,13 @@
 				952064A021CE7D3C00914545 /* Info.plist */,
 			);
 			path = TimeCounterTests;
+			sourceTree = "<group>";
+		};
+		9573583D21CF8CC600EC34E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
