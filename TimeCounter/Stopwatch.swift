@@ -8,13 +8,17 @@
 
 import UIKit
 
-class Stopwatch: UIViewController {
+
+class Stopwatch {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view.
+//    }
+    
+    
+    
+    let defaults = UserDefaults.standard
     
     private var startTime: Date?
     
@@ -29,6 +33,8 @@ class Stopwatch: UIViewController {
     }
     
     var totalTime : TimeInterval {
+        
+        
         return elapsedTime + timeIntervalArray.reduce(0, +)
     }
     
@@ -52,7 +58,13 @@ class Stopwatch: UIViewController {
     
     func stop() {
         timeIntervalArray.append(elapsedTime)
-        print(timeIntervalArray)
+        
+        
+        
+        //code for persisting to user defaults
+        //defaults.set(timeIntervalArray, forKey: "StoredTimeIntervals")
+        //print(timeIntervalArray)
+        
         //totalTime = timeIntervalArray.reduce(0, +)
         //print(totalTimeAsString)
         startTime = nil
