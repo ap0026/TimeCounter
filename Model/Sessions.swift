@@ -12,6 +12,6 @@ import RealmSwift
 class Sessions: Object {
     @objc dynamic var startDate: Date?
     @objc dynamic var elapsedTimeSave: TimeInterval = 0
-    //var parentCategory = LinkingObjects(fromType: Category.self, property: "sessions")
+    var parentCategory = LinkingObjects(fromType: Category.self, property: "sessions")
     
 }

@@ -11,5 +11,5 @@ import RealmSwift
 
 class Category: Object {
     @objc dynamic var name: String = ""
-    //let sessions = List<Sessions>()
+    let sessions = List<Sessions>()
 }

@@ -47,17 +47,25 @@ class ActivityTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ActivityToClock", sender: self)
+        performSegue(withIdentifier: "GoToViewController", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.selectedCategory = categories?[indexPath.row]
+        }
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        let destinationVC = segue.destination as! TestViewController
 //        }
     
-    @IBAction func unwindActivityTableView(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? ViewController {
-        }
-    }
+//    @IBAction func unwindActivityTableView(sender: UIStoryboardSegue) {
+//        if let sourceViewController = sender.source as? ViewController {
+//        }
+//    }
     
     //temp saving to realm method
     func save(category: Category) {
