@@ -9,7 +9,9 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    
     
     //var c: TimeInterval = 0
     
@@ -32,7 +34,7 @@ class ViewController: UIViewController {
     
    
     
-    var totalTime : TimeInterval {
+var totalTime : TimeInterval {
         return stopwatch.elapsedTime + timeIntervalArray
     }
     
@@ -57,8 +59,7 @@ class ViewController: UIViewController {
         totalTimeLabel.text = totalTimeAsString
     }
     
-    @IBAction func appendButton(_ sender: UIButton) {
-    }
+
     
     
     @IBAction func startButton(_ sender: UIButton) {
@@ -115,10 +116,18 @@ class ViewController: UIViewController {
         return stopwatch.startTime != nil
     }
     
+    @IBOutlet weak var SessionsTableView: UITableView!
+    
+    
+    
+    
     func start() {
         stopwatch.startTime = Date()
         newSession.startDate = stopwatch.startTime
     }
+    
+    
+    
     
     func stop() {
         //stopwatch.timeIntervalArray.append(stopwatch.elapsedTime)
@@ -136,7 +145,23 @@ class ViewController: UIViewController {
         }
         
         stopwatch.startTime = nil
+        SessionsTableView.reloadData()
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return selectedCategory?.sessions.count ?? 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sessionsCell = tableView.dequeueReusableCell(withIdentifier: "SessionsCell", for: indexPath)
+        
+        // Configure the cell...
+        guard let sessionsType = selectedCategory?.sessions[indexPath.row] else { fatalError() }
+        sessionsCell.textLabel?.text = String(sessionsType.elapsedTimeSave)
+        
+        return sessionsCell
+    }
+    
     
 }
 
